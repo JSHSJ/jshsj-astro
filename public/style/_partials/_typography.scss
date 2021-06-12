@@ -1,0 +1,70 @@
+@font-face {
+  font-family: 'Iosevka Aile';
+  font-weight: 400;
+  src: url(../../fonts/iosevka-aile-regular.woff2) format('woff2');
+  font-display: optional;
+}
+
+@font-face {
+  font-family: 'Iosevka Aile';
+  font-weight: 600;
+  src: url(../../fonts/iosevka-aile-semibold.woff2) format('woff2');
+  font-display: optional;
+}
+
+body {
+  font-family: var(--fontFamily);
+  font-size: calc(0.4vmin + 1em);
+  line-height: var(--line-height);
+}
+
+h1,h2,h3,h4,h5,h6 {
+  line-height: var(--lineHeight-small);
+  color: var(--text1);
+}
+
+h1 {
+  font-size: var(--s3);
+  font-weight: var(--fontWeightBold);
+}
+
+h2 {
+  font-size: var(--s3);
+  font-weight: var(--fontWeightRegular);
+}
+
+h3 {
+  font-size: var(--s2);
+  font-weight: var(--fontWeightBold);
+}
+
+h4 {
+  font-size: var(--s2);
+  font-weight: var(--fontWeightRegular);
+}
+h5 {
+  font-size: var(--s1);
+  font-weight: var(--fontWeightBold);
+}
+
+h6 {
+  font-size: var(--s1);
+  font-weight: var(--fontWeightRegular);
+}
+
+a {
+  color: var(--text1);
+  text-underline-offset: var(--s-5);
+  text-decoration-thickness: var(--s-5);
+  font-weight: var(--fontWeightBold);
+  text-decoration-color: var(--brand);
+
+  &:visited {
+    color: color(display-p3 .5 0 1);
+  }
+
+
+  &:hover {
+    opacity: 0.64;
+  }
+}
