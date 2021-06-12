@@ -5,6 +5,7 @@
 
   /* set defaults */
   --brand: var(--brand-light);
+  --brand2: var(--brand2-light);
   --text1: var(--text1-light);
   --text2: var(--text2-light);
   --surface1: var(--surface1-light);
@@ -21,6 +22,7 @@
     color-scheme: dark;
 
     --brand: var(--brand-dark);
+    --brand2: var(--brand2-dark);
     --text1: var(--text1-dark);
     --text2: var(--text2-dark);
     --surface1: var(--surface1-dark);
@@ -36,6 +38,7 @@
   color-scheme: light;
 
   --brand: var(--brand-light);
+  --brand2: var(--brand2-light);
   --text1: var(--text1-light);
   --text2: var(--text2-light);
   --surface1: var(--surface1-light);
@@ -50,6 +53,7 @@
   color-scheme: dark;
 
   --brand: var(--brand-dark);
+  --brand2: var(--brand2-dark);
   --text1: var(--text1-dark);
   --text2: var(--text2-dark);
   --surface1: var(--surface1-dark);
@@ -74,13 +78,13 @@
   --sectionPadding: var(--s2);
   --contentPadding: var(--defaultPadding-vertical) var(--defaultPadding-horizontal);
 
-  --containerMaxWidth: calc(1rem * math.pow(var(--ratio, ${i})));
+  --containerMaxWidth: 90em;
 }
 
 
 body {
   color: var(--text2);
-  background-color: var(--surface-1);
+  background-color: var(--surface1);
 }
 
 
@@ -91,4 +95,21 @@ body {
 ::selection, mark {
   background-color: var(--brand);
   color: var(--surface1);
+}
+
+a {
+  color: var(--text1);
+  text-underline-offset: var(--s-5);
+  text-decoration-thickness: var(--s-5);
+  font-weight: var(--fontWeightBold);
+  text-decoration-color: var(--brand);
+
+  &:visited {
+    color: color(display-p3 .5 0 1);
+  }
+
+
+  &:hover {
+    text-shadow: 0px 0px 1px var(--text2);
+  }
 }

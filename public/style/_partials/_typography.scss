@@ -12,10 +12,19 @@
   font-display: optional;
 }
 
+html {
+  font-size: calc(0.4vmin + 1em);
+
+    // --user-font-scale: 1rem - 16px;
+  // font-size: clamp(1rem, 0.64rem + 1.48vw + var(--user-font-scale), 1.25rem);
+}
+
 body {
   font-family: var(--fontFamily);
-  font-size: calc(0.4vmin + 1em);
-  line-height: var(--line-height);
+    // --user-font-scale: 1rem - 16px;
+  // font-size: clamp(1rem, 0.64rem + 1.48vw + var(--user-font-scale), 1.25rem);
+
+  line-height: var(--lineHeight);
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -50,21 +59,4 @@ h5 {
 h6 {
   font-size: var(--s1);
   font-weight: var(--fontWeightRegular);
-}
-
-a {
-  color: var(--text1);
-  text-underline-offset: var(--s-5);
-  text-decoration-thickness: var(--s-5);
-  font-weight: var(--fontWeightBold);
-  text-decoration-color: var(--brand);
-
-  &:visited {
-    color: color(display-p3 .5 0 1);
-  }
-
-
-  &:hover {
-    opacity: 0.64;
-  }
 }
